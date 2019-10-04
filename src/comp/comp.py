@@ -27,10 +27,7 @@ print('\n')
 
 print("Starts with D:")
 a = []
-
-for i in humans:
-    if 'D' in i.name[0]:
-        a.append(i.name)
+a = [h.name for h in humans if h.name[0].lower() == 'd']
 
 print(a)
 print('\n')
@@ -39,10 +36,7 @@ print('\n')
 # whose name ends in "e".
 print("Ends with e:")
 b = []
-
-for i in humans:
-    if 'e' in i.name[len(i.name)-1]:
-        b.append(i.name)
+b = [h.name for h in humans if h.name[-1].lower() == 'e']
 
 print(b)
 print('\n')
@@ -50,13 +44,7 @@ print('\n')
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
-c = []
-
-letters = ['C','D','E','F','G']
-for i in humans:
-    for l in letters:
-        if l in i.name[0]:
-            c.append(i.name)
+c = [h.name for h in humans if h.name[0].lower() in ['c', 'd', 'e', 'f', 'g']]
 
 print(c)
 print('\n')
@@ -64,9 +52,7 @@ print('\n')
 # Write a list comprehension that creates a list of all the ages plus 10.
 print("Ages plus 10:")
 d = []
-
-for i in humans:
-    d.append(i.age + 10)
+d = [h.age + 10 for h in humans]
 
 print(d)
 print('\n')
@@ -75,9 +61,7 @@ print('\n')
 # joined to the age with a hyphen, for example "David-31", for all humans.
 print("Name hyphen age:")
 e = []
-
-for i in humans:
-    e.append(f'{i.name}-{i.age}')
+e = [h.name + '-' + str(h.age) for h in humans]
 
 print(e)
 print('\n')
@@ -87,10 +71,7 @@ print('\n')
 # inclusive.
 print("Names and ages between 27 and 32:")
 f = []
-
-for i in humans:
-    if i.age > 27 and i.age <= 32:
-        f.append((i.name, i.age))
+f = [(h.name, h.age) for h in humans if 27 <= h.age <= 32]
 
 print(f)
 print('\n')
@@ -100,9 +81,7 @@ print('\n')
 # The "humans" list should be unmodified.
 print("All names uppercase:")
 g = []
-
-for i in humans:
-    g.append(Human(i.name.upper(), (i.age + 5)))
+g = [Human(h.name.upper(), h.age + 5) for h in humans]
 
 print(g)
 print('\n')
@@ -111,9 +90,7 @@ print('\n')
 print("Square root of ages:")
 import math
 h = []
-
-for i in humans:
-    h.append(math.sqrt(i.age))
+h = [math.sqrt(h.age) for h in humans]
 
 print(h)
 print('\n')
