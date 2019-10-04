@@ -19,13 +19,13 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Complete the programs in the `src/` directory in any order.
 
-* `oop/`
-    * `oop1.py`: class hierarchies
-    * `oop2.py`: subclassing and method overriding
-* `comp/`
-    * `comp.py`: list comprehensions
-* `cityreader/`
-    * `cityreader.py`: modules and CSV file reading
+* `oop/` ✅
+    * `oop1.py`: class hierarchies ✅
+    * `oop2.py`: subclassing and method overriding ✅
+* `comp/` ✅
+    * `comp.py`: list comprehensions ✅
+* `cityreader/` ✅
+    * `cityreader.py`: modules and CSV file reading ✅
 
 ## Testing
 
@@ -35,7 +35,7 @@ The `cityreader` stretch goal has its own test file, `test_stretch.py`, if you w
 
 **_It's never a bad idea to take a look at the test files in order to see what each test is expecting._**
 
-## Minimum Viable Product
+## Minimum Viable Product ✅
 
 In order to meet MVP requirements for this Sprint Challenge, complete all of the exercises posed in each directory by getting the tests for each exercise to pass.
 
